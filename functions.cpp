@@ -22,7 +22,7 @@ void afisare(int v[100])
     for (i = 1; i<=n; i++)
         cout << v[i] << ",";
 }
-int prim(int n)///verifica daca un numar este prim
+int prim(int n)///verifica daca un numar este primm
 {
     int i = 2;
     if(n<0)
