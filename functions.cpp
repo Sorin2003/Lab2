@@ -61,14 +61,18 @@ void cmlsprime(int v[100])///5 cea mai lunga secventa in care a-b e nr prim
 }
 void cmlsinterval(int v[100])
 {
-    int a,b;
-    cout<< "introdu inceputul intervalului";
-    cin>>a;
-    cout<< "introdu sfarsitul intervalului";
-    cin>>b;
+    int a, b;
+
+    cout << "introdu inceputul intervalului";
+    cin >> a;
+    cout << "introdu sfarsitul intervalului";
+    cin >> b;
+
     int i, nr = 0, n, nrmax = 0, j = 0;
+
     n = v[0];
-    for(i=1; i<=n; i++)
+
+    for (i = 1; i <= n; i++)
     {
         if(a <= v[i] and v[i] <= b)
             nr++;
