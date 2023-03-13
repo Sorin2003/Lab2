@@ -1,8 +1,9 @@
 #include <iostream>
 #include "meniu.h"
+#include "functions.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    teste();
     meniu();
     return 0;
 }

@@ -1,6 +1,6 @@
 #include <iostream>
+#include <assert.h>
 using namespace std;
-
 void citire(int v[100])
 {
     int n, i;
@@ -90,5 +90,17 @@ void cmlsinterval(int v[100])
         cout<<v[i]<<" ";
     }
     cout << endl;
+}
+
+void teste()
+{
+    cout << "Incep testele\n";
+    assert(prim(2) == true);
+    assert(prim(0) == false);
+    assert(prim(-2) == true);
+    assert(prim(-4) == false);
+    assert(prim(3) == true);
+    assert(prim(6) == false);
+    cout << "Se termina testele\n";
 }
 
