@@ -13,6 +13,19 @@ void citire(int v[100])
         cin >> v[i];
     }
 }
+/*void citire(int *v)
+{
+    int n, i;
+    cout << "Cate numere doriti sa aiba vectorul:";
+    cin >> n;
+    int *x = new int[n+1];
+    v[0] = n;
+    for (i = 1; i<=n; i++)
+    {
+        cout << "Introduceti un numar:";
+        cin >> v[i];
+    }
+}*/
 
 void afisare(int v[100])
 {
@@ -22,6 +35,16 @@ void afisare(int v[100])
     for (i = 1; i<=n; i++)
         cout << v[i] << ",";
 }
+
+/*void afisare(int *v)
+{
+    cout << "In vector se afla:";
+    int n, i;
+    n = v[0];
+    for (i = 1; i<=n; i++)
+        cout << v[i] << ",";
+}*/
+
 int prim(int n)///verifica daca un numar este primm
 {
     int i = 2;
@@ -95,16 +118,3 @@ void cmlsinterval(int v[100])
     cout << endl;
 
 }
-
-void teste()
-{
-    cout << "Incep testele\n";
-    assert(prim(2) == true);
-    assert(prim(0) == false);
-    assert(prim(-2) == true);
-    assert(prim(-4) == false);
-    assert(prim(3) == true);
-    assert(prim(6) == false);
-    cout << "Se termina testele\n";
-}
-

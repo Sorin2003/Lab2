@@ -1,6 +1,6 @@
 #include <iostream>
 #include "meniu.h"
-#include "functions.h"
+#include "teste.h"
 
 int main() {
     teste();
