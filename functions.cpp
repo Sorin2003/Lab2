@@ -1,33 +1,24 @@
 #include <iostream>
-#include <assert.h>
+
 using namespace std;
-void citire(int v[100])
+
+
+void citire(int *v)
 {
-    int n, i;
-    cout << "Cate numere doriti sa aiba vectorul:";
-    cin >> n;
-    v[0] = n;
+    int i;
+    //cin >> n;
+    //v = new int[n+1];
+    int n;
+    n = v[0];
     for (i = 1; i<=n; i++)
     {
         cout << "Introduceti un numar:";
         cin >> v[i];
     }
 }
-/*void citire(int *v)
-{
-    int n, i;
-    cout << "Cate numere doriti sa aiba vectorul:";
-    cin >> n;
-    int *x = new int[n+1];
-    v[0] = n;
-    for (i = 1; i<=n; i++)
-    {
-        cout << "Introduceti un numar:";
-        cin >> v[i];
-    }
-}*/
 
-void afisare(int v[100])
+
+void afisare(int *v)
 {
     cout << "In vector se afla:";
     int n, i;
@@ -36,16 +27,8 @@ void afisare(int v[100])
         cout << v[i] << ",";
 }
 
-/*void afisare(int *v)
-{
-    cout << "In vector se afla:";
-    int n, i;
-    n = v[0];
-    for (i = 1; i<=n; i++)
-        cout << v[i] << ",";
-}*/
 
-int prim(int n)///verifica daca un numar este primm
+bool prim(int n)///verifica daca un numar este primm
 {
     int i = 2;
     if(n<0)
@@ -60,9 +43,11 @@ int prim(int n)///verifica daca un numar este primm
     }
     return true;
 }
-void cmlsprime(int v[100])///5 cea mai lunga secventa in care a-b e nr prim
+
+
+void cmlsprime(int *v)///5 cea mai lunga secventa in care a-b e nr prim
 {
-     int i, nr = 0, n, nrmax = 0, j = 0, ve[100], k,nrmaxi;
+     int i, nr = 0, n, nrmax = 0, j = 0;
      n = v[0];
      for(i=1; i<n; i++) {
          ///cout<<v[i+1]-v[i]<<" "<<prim(v[i + 1] - v[i])<<endl;
@@ -72,7 +57,7 @@ void cmlsprime(int v[100])///5 cea mai lunga secventa in care a-b e nr prim
              nrmax = nr;
              j = i;
          }
-         if (prim(v[i + 1] - v[i]) == false) {
+         if (!prim(v[i + 1] - v[i])) {
              nr = 0;
          }
      }
@@ -82,7 +67,9 @@ void cmlsprime(int v[100])///5 cea mai lunga secventa in care a-b e nr prim
     }
      cout << endl;
 }
-void cmlsinterval(int v[100])
+
+
+void cmlsinterval(int *v)
 {
     int a, b;
 
@@ -98,7 +85,7 @@ void cmlsinterval(int v[100])
     for (i = 1; i <= n; i++)
     {
         if(a <= v[i] and v[i] <= b){
-            cout<<v[i]<<" "<<endl;
+            ///cout<<v[i]<<" "<<endl;
             nr++;
         }
         else nr = 0;
@@ -116,5 +103,10 @@ void cmlsinterval(int v[100])
         cout<<v[i]<<" ";
     }
     cout << endl;
+}
 
+
+void del(int *v)
+{
+    delete[] v;
 }

@@ -1,7 +1,10 @@
 //
 // Created by sampa on 3/14/2023.
 //
+#include <iostream>
 #include "functions.h"
+#include <assert.h>
+using namespace std;
 void teste()
 {
     cout << "Incep testele\n";

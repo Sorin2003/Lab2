@@ -4,5 +4,5 @@
 
 #ifndef LAB2_MENIU_H
 #define LAB2_MENIU_H
-void meniu();
+int meniu();
 #endif //LAB2_MENIU_H

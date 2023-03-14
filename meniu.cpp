@@ -5,9 +5,10 @@
 #include "functions.h"
 using namespace std;
 
-void meniu() {
+int meniu() {
     int op = 100;
-    int v[100];
+    int *v;
+    int n;
     while(op != 0){
         cout << "1. Citire" << endl;
         cout << "2. Afisare" << endl;
@@ -18,10 +19,17 @@ void meniu() {
 
         cin >> op;
         switch(op) {
-            case 1: ///citire
+            case 0:
+                del(v);
+                return 0;
+            case 1:{ ///citire
+            cout << "Cate numere doriti sa aiba vectorul:";
+            cin>>n;
+            v = new int[n+1];
+            v[0] = n;
             citire(v);
-                break;
-            case 2: ///afisarea
+                break;}
+            case 2: ///afisarea{
                 afisare(v);
                 cout << endl;
                 break;
