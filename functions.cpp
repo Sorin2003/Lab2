@@ -42,7 +42,7 @@ void cmlsprime(int v[100])///5 cea mai lunga secventa in care a-b e nr prim
      int i, nr = 0, n, nrmax = 0, j = 0, ve[100], k,nrmaxi;
      n = v[0];
      for(i=1; i<n; i++) {
-         cout<<v[i+1]-v[i]<<" "<<prim(v[i + 1] - v[i])<<endl;
+         ///cout<<v[i+1]-v[i]<<" "<<prim(v[i + 1] - v[i])<<endl;
          if (prim(v[i + 1] - v[i]))
              nr++;
          if (nr > nrmax) {
@@ -74,8 +74,11 @@ void cmlsinterval(int v[100])
 
     for (i = 1; i <= n; i++)
     {
-        if(a <= v[i] and v[i] <= b)
+        if(a <= v[i] and v[i] <= b){
+            cout<<v[i]<<" "<<endl;
             nr++;
+        }
+        else nr = 0;
         if (nr > nrmax) {
             nrmax = nr;
             j = i;
@@ -90,6 +93,7 @@ void cmlsinterval(int v[100])
         cout<<v[i]<<" ";
     }
     cout << endl;
+
 }
 
 void teste()
